@@ -17,15 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\Responses\" />
-    <Folder Include="DTOs\Requests\" />
     <Folder Include="Interfaces\Authentication\" />
     <Folder Include="Interfaces\Notifications\" />
-    <Folder Include="Interfaces\Repositories\" />
     <Folder Include="Mappings\" />
-    <Folder Include="Extensions\" />
     <Folder Include="Validators\" />
-    <Folder Include="UseCases\Contracts\" />
     <Folder Include="UseCases\BabyChores\" />
     <Folder Include="UseCases\Authentication\" />
     <Folder Include="UseCases\Points\" />

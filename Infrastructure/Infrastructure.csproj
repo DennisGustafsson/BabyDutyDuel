@@ -14,13 +14,10 @@
   <ItemGroup>
     <Folder Include="Authentication\" />
     <Folder Include="Mappings\" />
-    <Folder Include="Extensions\" />
     <Folder Include="Notifications\" />
-    <Folder Include="Persistence\EFC\Context\" />
     <Folder Include="Persistence\EFC\Entities\" />
     <Folder Include="Persistence\EFC\Configurations\" />
     <Folder Include="Persistence\EFC\Migrations\" />
-    <Folder Include="Persistence\Repositories\" />
   </ItemGroup>
 
   <ItemGroup>
