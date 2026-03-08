@@ -17,13 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\Authentication\" />
     <Folder Include="Interfaces\Notifications\" />
     <Folder Include="Mappings\" />
     <Folder Include="Validators\" />
-    <Folder Include="UseCases\BabyChores\" />
-    <Folder Include="UseCases\Authentication\" />
-    <Folder Include="UseCases\Points\" />
     <Folder Include="UseCases\Parents\" />
   </ItemGroup>
 

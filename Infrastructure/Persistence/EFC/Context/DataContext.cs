@@ -11,6 +11,8 @@ public class DataContext : DbContext
 
     public DbSet<Parent> Parents => Set<Parent>();
     public DbSet<Contract> Contracts => Set<Contract>();
+    public DbSet<BabyChore> BabyChores => Set<BabyChore>();
+    public DbSet<ChoreCompletion> ChoreCompletions => Set<ChoreCompletion>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -32,6 +34,26 @@ public class DataContext : DbContext
             entity.Property(e => e.Status).IsRequired();
             entity.HasIndex(e => e.Parent1Id);
             entity.HasIndex(e => e.Parent2Id);
+        });
+
+        modelBuilder.Entity<BabyChore>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+            entity.Property(e => e.Title).IsRequired().HasMaxLength(200);
+            entity.Property(e => e.Description).HasMaxLength(1000);
+            entity.Property(e => e.PointValue).IsRequired();
+            entity.Property(e => e.Category).IsRequired();
+            entity.HasIndex(e => e.ContractId);
+            entity.HasIndex(e => e.CreatedByParentId);
+        });
+
+        modelBuilder.Entity<ChoreCompletion>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+            entity.Property(e => e.PointsAwarded).IsRequired();
+            entity.Property(e => e.Notes).HasMaxLength(500);
+            entity.HasIndex(e => e.ChoreId);
+            entity.HasIndex(e => e.CompletedByParentId);
         });
     }
 }
